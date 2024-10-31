@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            /* Medidas Absolutas
+            cm, mm, in (inches/ polegada), px (pixel), pt (ponto), pc(paica)
+            
+            Medidas Relativas
+            em (tamanho relativo ao M maiúsculo de uma fonte), ex (altura x), rem, vw(view width), vh(view height), %  
+            16px geralmente = 1em
+            */
+
+            font-size: 16px/*padrão dos sites*/;
+            font-weight: normal ;
+            /* lighter normal bold bolder*/
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        h1 {
+            
+            /* shorthand font
+            - font-style -> font-weight -> font-size -> font-family 
+            font-family: sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic; */
+            font: italic bolder 3em sans-serif;
+        }
+
+        h2 {
+            font: bold 2em sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eaque ut, labore quae aut pariatur sit maxime ipsam velit hic tempora quidem unde adipisci nulla, explicabo repudiandae consequatur vitae provident. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, iure? Voluptas officiis porro veniam ea quos incidunt odit fugiat nobis atque temporibus dignissimos molestias, sunt quaerat quia esse rerum aspernatur!</p>
+
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe tenetur temporibus, eaque repudiandae maiores iusto deserunt? Explicabo alias expedita labore deserunt sequi animi magnam, harum sint eius laboriosam atque suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae beatae vero, ea iure unde enim maxime, quas quae praesentium magnam rem dignissimos. Dicta accusantium quisquam tempore voluptates eos provident tempora?</p>
+    
+</body>
+</html>
