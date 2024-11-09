@@ -13,7 +13,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
-            border: 1px solid black;
+            position: relative;
         }
         
         td, th {
@@ -29,8 +29,22 @@
         }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            background-color: #383838;
+            top: -1;
+        }
+
+        tbody > tr:nth-child(odd) /* 2n-1 */{
+            background-color: white;                
+        }                               /* ODD = Ímpar, EVEN = Par */
+                                            
+        tbody > tr:nth-child(even) /* 2n */{
+            background-color: lightgray;
         }
 
         td.num {
@@ -55,8 +69,10 @@
     <table>
         <caption>População das Unidades Federativas</caption>
         <thead>
-            <th scope="col">Estado</th>
-            <th scope="col" style="width: 50px;">População</th>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
         </thead>
 
         <tfoot>
