@@ -1,3 +1,93 @@
 @charset "UTF-8";
 
 /* Todas as demais mídias */
+
+
+/* Typical Device Breakpoints 
+
+Extra small devices: (phones, 600px and down) 
+
+Small devices: (portrait tablets and large phones, 600px and up) 
+
+Medium devices: (landscape tablets, 768px and up) 
+
+Large devices: (laptops/desktops, 992px and up) 
+
+Extra large devices: (large laptops and desktops, 1200px and up) 
+*/
+
+@media print {
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main {
+        border: 1px solid black;
+        width: 90vw;
+    }
+
+    main::after {
+        content: "Essa impressão foi feita através do site www.qwerty.com";
+        text-decoration: overline;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#printer { display: block; }
+    img#desktop { display: none; }
+    img#big-screen { display: none; }
+
+}
+
+@media screen and (min-width: 768px) { /* MEDIUM DEVICES */
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    main {
+        width: 70vw;
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: block; }
+    img#printer { display: none; }
+    img#desktop { display: none; }
+    img#big-screen { display: none; }
+}
+
+@media screen and (min-width: 992px) { /* BIG SCREENS */ 
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    main {
+        width: 80vw;
+    }
+    
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#printer { display: none; }
+    img#desktop { display: block; }
+    img#big-screen { display: none; }
+}
+
+@media screen and (min-width: 1201px) { /* EXTRA BIG SCREENS */
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 90vw;
+    }
+    
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#printer { display: none; }
+    img#desktop { display: none; }
+    img#big-screen { display: block; }
+}
